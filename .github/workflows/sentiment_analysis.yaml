@@ -1,0 +1,38 @@
+name: Run Sentiment Pipeline
+
+on:
+  schedule:
+    - cron: '0 8 * * 1-5'  # Every weekday (Mon-Fri) at 08:00 UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub UI
+
+jobs:
+  run-sentiment-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run main_sentiment.py
+        run: |
+          python main_sentiment.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          cd $GITHUB_WORKSPACE
+          git add temp_processed_data.json temp_date_risk.csv news_with_risk_score.csv aggregated_risk_scores.csv 
+          git commit -m "Update generated JSON and CSV files [auto]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

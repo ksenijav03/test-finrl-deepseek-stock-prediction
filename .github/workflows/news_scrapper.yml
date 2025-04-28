@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r scrape/requirements.txt
+        pip install -r requirements.txt
 
     - name: Run the scraper
       env:
@@ -30,14 +30,14 @@ jobs:
         REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
         REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
         NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-      run: python scrape/scrape_script.py
+      run: python scrape_script.py
 
     - name: Commit and push CSV + JSON
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         cd $GITHUB_WORKSPACE
-        git add scrape/news.csv scrape/seen_hashes.json
+        git add news.csv seen_hashes.json
         git commit -m "Automated daily scrape: $(date)"
         git push
       env:
