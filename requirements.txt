@@ -1,0 +1,16 @@
+requests
+feedparser
+beautifulsoup4
+newsapi-python
+praw
+numpy
+pandas 
+matplotlib
+huggingface_hub
+transformers
+torch
+swig
+wrds
+pyportfolioopt
+git+https://github.com/AI4Finance-Foundation/FinRL.git
+pandas_market_calendars
