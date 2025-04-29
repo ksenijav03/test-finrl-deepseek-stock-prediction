@@ -38,6 +38,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git pull origin main
         cd scrape
         git add news.csv seen_hashes.json
         git commit -m "Automated daily scrape: $(date)"
