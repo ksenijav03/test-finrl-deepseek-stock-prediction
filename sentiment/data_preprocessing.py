@@ -43,12 +43,17 @@ def data_preprocessing(path):
         df = df.sort_values(by='datetime', ascending=True)
 
         # Set startdate as yesterday's date and end date as today's date
-        start_date = (datetime.now() - timedelta(days=1)).date()
-        end_date = datetime.now().date()
+        # start_date = (datetime.now() - timedelta(days=1)).date()
+        # end_date = datetime.now().date()
+        start_date = datetime(2025, 4, 28)
+        end_date = datetime(2025, 4, 29)
+
+        
         print(f'Start date: {start_date}')
         print(f'End date: {end_date}')
 
-        df_subset = df[(df['datetime'].dt.date >= start_date) & (df['datetime'].dt.date < end_date)]
+        df_subset = df[(df['datetime'] >= start_date) & (df['datetime'] < end_date)]
+        # df_subset = df[(df['datetime'].dt.date >= start_date) & (df['datetime'].dt.date < end_date)]
         df_subset.reset_index(drop=True)
 
         # Check if df_subset is empty
@@ -66,4 +71,4 @@ def data_preprocessing(path):
     except Exception as e:
         print(f"[Error in data preprocessing pipeline] -> {e}")
   
-      
+  
