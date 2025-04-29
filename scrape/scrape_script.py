@@ -43,8 +43,8 @@ two_days_ago = today - timedelta(days=2)
 FROM_DATE = two_days_ago.strftime('%Y-%m-%dT00:00:00')
 TO_DATE = today.strftime('%Y-%m-%dT23:59:59')
 
-COMBINED_OUTPUT_FILE = "scrape/news.csv"
-SEEN_HASH_FILE = "scrape/seen_hashes.json"
+COMBINED_OUTPUT_FILE = "news.csv"
+SEEN_HASH_FILE = "seen_hashes.json"
 
 # --------------------------------------------------------------------------------------
 
