@@ -1,56 +1,60 @@
 datetime,source,specific_source,risk score
-2025-04-29 00:07:00,News,Thestreet,3
-2025-04-29 00:33:00,Reddit,stocks,3
-2025-04-29 02:06:00,News,Investopedia,3
-2025-04-29 07:06:00,News,Yahoo Finance,3
-2025-04-29 07:51:00,News,Fool,5
-2025-04-29 08:15:00,News,Fool,4
-2025-04-29 08:25:00,News,Fool,3
-2025-04-29 08:45:00,News,Fool,3
-2025-04-29 09:30:00,News,Yahoo Finance,3
-2025-04-29 09:32:00,News,Fool,4
-2025-04-29 10:30:00,News,Fool,4
-2025-04-29 11:09:35,News,Investopedia,3
-2025-04-29 12:00:55,News,Yahoo Finance,4
-2025-04-29 12:11:00,News,Investopedia,3
-2025-04-29 12:11:00,News,Fool,4
-2025-04-29 12:18:00,News,Yahoo Finance,3
-2025-04-29 12:29:58,News,Investopedia,3
-2025-04-29 12:30:27,News,Yahoo Finance,1
-2025-04-29 13:00:13,News,Yahoo Finance,3
-2025-04-29 13:21:08,News,Yahoo Finance,4
-2025-04-29 13:36:12,News,Investopedia,3
-2025-04-29 13:36:55,News,Yahoo Finance,4
-2025-04-29 13:37:00,News,Fool,3
-2025-04-29 13:54:58,News,Yahoo Finance,4
-2025-04-29 14:09:28,News,Investopedia,3
-2025-04-29 14:16:50,News,Yahoo Finance,4
-2025-04-29 14:41:24,News,Yahoo Finance,3
-2025-04-29 14:45:00,News,Yahoo Finance,3
-2025-04-29 14:53:22,News,Yahoo Finance,3
-2025-04-29 15:04:20,News,Investopedia,3
-2025-04-29 15:11:42,News,Yahoo Finance,3
-2025-04-29 15:38:16,News,Yahoo Finance,5
-2025-04-29 15:53:57,News,Investopedia,3
-2025-04-29 16:36:34,News,Investopedia,3
-2025-04-29 17:19:42,News,Yahoo Finance,3
-2025-04-29 17:29:39,News,Yahoo Finance,3
-2025-04-29 17:32:35,News,Investopedia,3
-2025-04-29 18:25:16,News,Yahoo Finance,3
-2025-04-29 19:00:00,News,Yahoo Finance,4
-2025-04-29 19:58:48,News,Yahoo Finance,3
-2025-04-29 20:19:00,News,Yahoo Finance,3
-2025-04-29 20:29:37,News,Investopedia,4
-2025-04-29 20:43:32,News,Investopedia,3
-2025-04-29 20:46:43,News,Yahoo Finance,4
-2025-04-29 20:48:39,News,Investopedia,3
-2025-04-29 20:57:02,News,Investopedia,3
-2025-04-29 21:01:00,News,Investopedia,3
-2025-04-29 21:05:29,News,Investopedia,3
-2025-04-29 21:08:53,News,Investopedia,3
-2025-04-29 21:26:32,News,Yahoo Finance,3
-2025-04-29 21:30:40,News,Yahoo Finance,3
-2025-04-29 21:39:24,News,Investopedia,3
-2025-04-29 21:45:16,News,Yahoo Finance,3
-2025-04-29 21:47:21,News,Investopedia,3
-2025-04-29 23:30:26,News,Yahoo Finance,4
+2025-04-30 01:55:25,News,Yahoo Finance,3
+2025-04-30 03:17:07,News,Investopedia,4
+2025-04-30 07:11:31,News,Yahoo Finance,4
+2025-04-30 08:05:55,News,Yahoo Finance,3
+2025-04-30 08:10:00,News,Fool,4
+2025-04-30 08:15:00,News,Fool,4
+2025-04-30 08:50:00,News,Fool,4
+2025-04-30 08:58:00,News,Fool,4
+2025-04-30 09:29:00,News,Fool,4
+2025-04-30 10:00:00,News,Investopedia,4
+2025-04-30 10:00:00,News,Investopedia,4
+2025-04-30 10:12:00,News,Fool,4
+2025-04-30 10:45:27,News,Investopedia,3
+2025-04-30 10:56:07,News,Yahoo Finance,3
+2025-04-30 11:00:27,News,Yahoo Finance,3
+2025-04-30 11:30:00,News,Fool,4
+2025-04-30 11:37:46,News,Yahoo Finance,4
+2025-04-30 11:40:00,News,Yahoo Finance,3
+2025-04-30 11:45:00,News,Fool,3
+2025-04-30 12:03:21,News,Investopedia,4
+2025-04-30 12:15:00,News,Yahoo Finance,3
+2025-04-30 12:27:00,News,Yahoo Finance,3
+2025-04-30 12:44:30,Reddit,stocks,4
+2025-04-30 12:45:21,News,Yahoo Finance,4
+2025-04-30 12:47:00,News,Yahoo Finance,3
+2025-04-30 12:50:37,News,Investopedia,3
+2025-04-30 13:15:59,News,Yahoo Finance,4
+2025-04-30 13:59:09,News,Investopedia,4
+2025-04-30 14:19:14,News,Investopedia,3
+2025-04-30 15:50:44,News,Investopedia,3
+2025-04-30 16:11:24,News,Investopedia,3
+2025-04-30 18:23:02,News,Investopedia,3
+2025-04-30 18:25:24,Reddit,StockMarket,3
+2025-04-30 19:06:03,News,Investopedia,3
+2025-04-30 19:21:53,News,Yahoo Finance,5
+2025-04-30 19:31:26,News,Yahoo Finance,3
+2025-04-30 19:40:00,News,Investopedia,3
+2025-04-30 19:49:22,Reddit,wallstreetbets,3
+2025-04-30 19:55:46,News,Yahoo Finance,3
+2025-04-30 19:56:00,News,Yahoo Finance,3
+2025-04-30 19:57:53,News,Yahoo Finance,3
+2025-04-30 20:19:39,News,Yahoo Finance,4
+2025-04-30 20:20:06,News,Yahoo Finance,3
+2025-04-30 20:21:41,News,Yahoo Finance,3
+2025-04-30 20:34:57,News,Yahoo Finance,3
+2025-04-30 20:54:25,News,Yahoo Finance,3
+2025-04-30 21:00:00,News,Yahoo Finance,3
+2025-04-30 21:04:57,News,Yahoo Finance,3
+2025-04-30 21:05:13,News,Yahoo Finance,3
+2025-04-30 21:13:32,News,Investopedia,3
+2025-04-30 21:29:58,News,Yahoo Finance,3
+2025-04-30 21:45:25,News,Yahoo Finance,3
+2025-04-30 22:10:00,News,Yahoo Finance,3
+2025-04-30 22:35:21,News,Investopedia,3
+2025-04-30 22:44:00,News,Yahoo Finance,3
+2025-04-30 22:52:59,News,Yahoo Finance,3
+2025-04-30 23:10:24,News,Investopedia,3
+2025-04-30 23:40:39,News,Yahoo Finance,4
+2025-04-30 23:45:10,News,Investopedia,3
