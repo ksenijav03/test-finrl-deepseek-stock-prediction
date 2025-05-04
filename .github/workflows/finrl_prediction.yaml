@@ -6,7 +6,7 @@ on:
   workflow_dispatch:       # Allows manual trigger from GitHub UI
 
 jobs:
-  run-sentiment-pipeline:
+  run-finrl-prediction:
     runs-on: ubuntu-latest
 
     steps:
