@@ -4,6 +4,7 @@ from tqdm import tqdm
 from config import G_LLM, TEMP_DATE_RISK_CSV
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import transformers
+import sys
 
 
 tokenizer = AutoTokenizer.from_pretrained(G_LLM)
@@ -92,6 +93,7 @@ def get_risk_score(source, header, content):
 
     except Exception as e:
         print(f"[Error in risk score generation] -> {e}")
+        sys.exit(1)
 
 
 def get_all_scores(json_data):
@@ -113,6 +115,7 @@ def get_all_scores(json_data):
     
     print(f'All risk scores: {risk_scores}')
     print("Risk score generation completed.")
+    
     return risk_scores
 
 
@@ -157,11 +160,4 @@ def append_score_to_csv(json_data, risk_scores, filename):
             
     except Exception as e:
         print(f"[Error in risk score generation] -> {e}")
-    
-
-
-
-
-   
-    
-    
+        sys.exit(1)

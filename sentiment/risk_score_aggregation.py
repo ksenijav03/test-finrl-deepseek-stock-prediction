@@ -14,20 +14,17 @@ def _floor_time_half_hour(date):
     Returns:
         datetime: A new datetime object representing the rounded-down time
     """
-    try:
-        if isinstance(date, str):
-            date = datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-        minutes = date.minute
-        if minutes < 30:
-            round_date = date.replace(minute=30, second=0, microsecond=0) - timedelta(hours=1)
-        else:
-            round_date = date.replace(minute=30, second=0, microsecond=0)
-        return round_date
-    except Exception as e:
-        print(f"[Error in rounding hours]: {e}")
-        return None
-
-
+    if isinstance(date, str):
+        date = datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+    minutes = date.minute
+    if minutes < 30:
+        round_date = date.replace(minute=30, second=0, microsecond=0) - timedelta(hours=1)
+    else:
+        round_date = date.replace(minute=30, second=0, microsecond=0)
+        
+    return round_date
+    
+    
 def get_source_weight(specific_source):
     """
     Creates a new column to match each row's source to its respective weight
@@ -82,5 +79,3 @@ def aggregate_risk_score(filename):
     result_df = pd.DataFrame(aggregated)
     result_df.to_csv(AGGREGATED_WEIGHTS_CSV , mode='a', header=False, index=False)
     print(f"Appended aggregated weights to existing CSV: {AGGREGATED_WEIGHTS_CSV }")
-    
-

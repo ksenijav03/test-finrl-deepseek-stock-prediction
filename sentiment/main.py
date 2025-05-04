@@ -3,6 +3,7 @@ from data_preprocessing import data_preprocessing
 from risk_score_generation import get_all_scores, append_score_to_csv
 from risk_score_aggregation import aggregate_risk_score
 import json
+import sys
 
 
 if __name__ == "__main__":
@@ -25,4 +26,5 @@ if __name__ == "__main__":
         
 
     except Exception as e:
-        print(f"Error occured -> {e}")
+        print(f"Error occured in main.py -> {e}")
+        sys.exit(1)

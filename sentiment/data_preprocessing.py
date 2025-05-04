@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import re
 from config import TEMP_PROCESSED_JSON
+import sys
 
 
 def data_preprocessing(path):
@@ -66,5 +67,4 @@ def data_preprocessing(path):
 
     except Exception as e:
         print(f"[Error in data preprocessing pipeline] -> {e}")
-  
-  
+        sys.exit(1)
