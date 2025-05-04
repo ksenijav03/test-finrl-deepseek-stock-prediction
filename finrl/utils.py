@@ -11,6 +11,10 @@ from config import TRAIN_CSV, TRADE_CSV, AGGREGATED_RISK_SCORE
 from custom_env import RiskAwareStockTradingEnv
 
 
+"""
+utils.py contains all the necessary functions needed in inference.py    
+""" 
+
 def load_train_trade():
     train = pd.read_csv(TRAIN_CSV)
     trade = pd.read_csv(TRADE_CSV)

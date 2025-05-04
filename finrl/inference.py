@@ -5,6 +5,17 @@ import sys
 
 
 def get_inference():
+    """
+    This function executes the steps in the inference stage.
+    It loads the train_data.csv and trade_data.csv obtained from the processing stage, and loads the aggregated_risk_scores.csv from the /sentiment part.
+    It runs the model prediction for Agent 1 (only stock data) and Agent 2 (stock data + sentiment data).
+    It calculates the MVO and loads the DJIA benchmark index hourly data as a base comparison.
+    It merges the results from Agent 1, Agent 2, MVO, and DJIA into results.csv to be plotted in the final dashboard.
+
+    Args:
+        None
+        
+    """ 
     try:
         # Load train and trade data
         _, trade = load_train_trade()

@@ -3,6 +3,17 @@ import pandas as pd
 
 
 class RiskAwareStockTradingEnv(StockTradingEnv):
+    """
+    This is a custom class built for Agent 2's Trading Environment to take the news sentiment risk scores into consideration during its trading steps.
+    This class inherits the StockTradingEnv class from FinRL, and only overwrittes the step() function to give 'reward' or 'penalty' to the agent depending on the risk scores. 
+    The amount of 'reward' or 'penalty' is indicated by a given weight value. 
+    For example, a lower risk score signals optimistic chance in its trade, thus the agent's cash balance is multiplied with a high weight ('reward').
+    
+    Args:
+        StockTradingEnv (class): provided by FinRL 
+        
+    """
+
     def __init__(self, df, **kwargs):
         self.risk_score_col = 'risk_score'
         super().__init__(df, **kwargs)
@@ -21,7 +32,7 @@ class RiskAwareStockTradingEnv(StockTradingEnv):
         # Inject risk into state indirectly (scale the cash balance)
         risk_weight = self._get_risk_scaling_factor(risk_score)
 
-        # Assume state[0] = cash balance
+        # State[0] refers to the agent's cash balance
         state[0] = state[0] * risk_weight
 
         return state, reward, done, truncated, info

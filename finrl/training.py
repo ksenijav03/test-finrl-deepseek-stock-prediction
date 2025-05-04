@@ -7,6 +7,14 @@ from config import TRAIN_CSV
 
 
 def train():
+    """
+    This function trains the A2C model using train_data.csv obtained from processing.py
+    This function is called only if it is necessary to retrain the model.
+
+    Args:
+        None
+        
+    """ 
     try:
         # Load train data
         train = pd.read_csv(TRAIN_CSV)
