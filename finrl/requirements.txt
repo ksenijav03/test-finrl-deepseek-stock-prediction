@@ -1,0 +1,12 @@
+numpy
+pandas 
+transformers
+torch
+swig
+wrds
+pyportfolioopt
+git+https://github.com/AI4Finance-Foundation/FinRL.git
+pandas_market_calendars
+yfinance>=0.2.58
+
+# ensure python version >= 3.11
