@@ -1,7 +1,7 @@
 # 📈 Nvidia stock (near) real-time predictions with FinRL and DeepSeek using financial news market sentiment
 
 ## Overview
-project explores the integration of financial AI tools to enhance real-time decision-making in stock trading, specifically focusing on Nvidia (NVDA) stock. By incorporating market sentiment derived from financial news into trading strategies, the system aims to improve portfolio performance through more informed predictions.
+This project explores the integration of financial AI tools to enhance real-time decision-making in stock trading, specifically focusing on Nvidia (NVDA) stock. By incorporating market sentiment derived from financial news into trading strategies, the system aims to improve portfolio performance through more informed predictions.
 
 ## Objectives
 - Leverage FinRL and DeepSeek for algorithmic trading and sentiment analysis.
@@ -23,6 +23,14 @@ project explores the integration of financial AI tools to enhance real-time deci
 A representation of the process flow is as shown in the diagram below.
 <br>
 ![flowchart](flowchart.jpg)
+<br>
+
+## Dashboard 
+This project supports the visualization of the results in a dashboard app, as shown below. It can opened from the `dashboard` folder.
+
+Example: 
+<br>
+![dashboard example](dashboard_image.png)
 <br>
 
 ### Disclaimer
