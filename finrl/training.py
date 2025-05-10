@@ -31,7 +31,7 @@ def train():
 
         env_kwargs = {
             "hmax": 500,                         # Max shares to trade per step
-            "initial_amount": 100000,            # Lower for intraday
+            "initial_amount": 1000000,            # Lower for intraday
             "num_stock_shares": num_stock_shares,
             "buy_cost_pct": buy_cost_list,
             "sell_cost_pct": sell_cost_list,
