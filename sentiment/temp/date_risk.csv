@@ -1,67 +1,78 @@
 datetime,source,specific_source,risk score
-2025-05-12 00:45:18,Reddit,wallstreetbets,3
-2025-05-12 03:25:58,News,Investopedia,3
-2025-05-12 07:27:38,Reddit,StockMarket,3
-2025-05-12 07:51:00,News,Fool,3
-2025-05-12 09:00:00,News,Investopedia,4
-2025-05-12 09:30:00,News,Fool,4
-2025-05-12 10:27:05,News,Investopedia,3
-2025-05-12 11:09:00,News,Yahoo Finance,3
-2025-05-12 11:13:25,Reddit,wallstreetbets,3
-2025-05-12 11:15:00,News,Fool,4
-2025-05-12 11:41:08,News,Yahoo Finance,3
-2025-05-12 11:45:00,News,Fool,4
-2025-05-12 11:55:37,News,Investopedia,4
-2025-05-12 11:59:07,News,Yahoo Finance,3
-2025-05-12 12:00:37,News,Yahoo Finance,3
-2025-05-12 12:23:07,Reddit,StockMarket,3
-2025-05-12 12:26:11,News,Investopedia,3
-2025-05-12 12:31:06,News,Yahoo Finance,3
-2025-05-12 12:45:00,News,Yahoo Finance,3
-2025-05-12 12:51:12,News,Investopedia,3
-2025-05-12 13:04:00,News,Yahoo Finance,3
-2025-05-12 13:08:56,News,Yahoo Finance,3
-2025-05-12 13:12:18,News,Yahoo Finance,3
-2025-05-12 13:21:43,News,Investopedia,3
-2025-05-12 14:01:47,News,Yahoo Finance,3
-2025-05-12 14:18:04,News,Investopedia,3
-2025-05-12 14:29:33,News,Yahoo Finance,3
-2025-05-12 14:37:00,News,Yahoo Finance,3
-2025-05-12 14:44:48,News,Investopedia,3
-2025-05-12 15:04:47,News,Investopedia,3
-2025-05-12 15:15:04,News,Yahoo Finance,3
-2025-05-12 15:35:03,News,Investopedia,3
-2025-05-12 15:39:37,News,Investopedia,3
-2025-05-12 15:55:52,News,Investopedia,5
-2025-05-12 15:58:11,News,Investopedia,3
-2025-05-12 16:00:07,News,Investopedia,3
-2025-05-12 16:24:05,News,Fool,3
-2025-05-12 16:25:00,News,Yahoo Finance,3
-2025-05-12 16:49:25,News,Fool,3
-2025-05-12 16:53:00,News,Fool,3
-2025-05-12 17:49:22,News,Yahoo Finance,3
-2025-05-12 18:02:01,News,Yahoo Finance,3
-2025-05-12 18:02:23,News,Investopedia,3
-2025-05-12 18:35:09,News,Investopedia,3
-2025-05-12 18:38:30,News,Yahoo Finance,3
-2025-05-12 18:50:54,Reddit,investing,3
-2025-05-12 18:51:18,News,Investopedia,4
-2025-05-12 19:05:15,News,Yahoo Finance,3
-2025-05-12 19:05:52,News,Investopedia,3
-2025-05-12 19:18:09,News,Investopedia,4
-2025-05-12 19:28:23,News,Investopedia,3
-2025-05-12 20:00:36,News,Yahoo Finance,3
-2025-05-12 20:07:29,News,Investopedia,3
-2025-05-12 20:11:13,News,Yahoo Finance,3
-2025-05-12 20:14:25,News,Yahoo Finance,3
-2025-05-12 20:17:00,News,Yahoo Finance,3
-2025-05-12 20:24:47,Reddit,stocks,3
-2025-05-12 20:30:24,News,Investopedia,4
-2025-05-12 20:36:58,Reddit,StockMarket,3
-2025-05-12 20:45:00,News,Investopedia,3
-2025-05-12 20:54:01,News,Investopedia,4
-2025-05-12 21:08:01,News,Investopedia,3
-2025-05-12 21:15:19,News,Thestreet,3
-2025-05-12 21:24:18,News,Investopedia,3
-2025-05-12 21:30:34,News,Investopedia,3
-2025-05-12 23:25:34,News,Investopedia,3
+2025-05-13 00:14:52,Reddit,wallstreetbets,3
+2025-05-13 02:42:37,Reddit,wallstreetbets,3
+2025-05-13 03:12:40,News,Investopedia,3
+2025-05-13 06:06:51,News,Etfdailynews,5
+2025-05-13 06:07:04,News,Etfdailynews,3
+2025-05-13 06:07:05,News,Etfdailynews,5
+2025-05-13 06:08:48,News,Etfdailynews,3
+2025-05-13 06:08:49,News,Etfdailynews,3
+2025-05-13 06:08:49,News,Etfdailynews,5
+2025-05-13 06:08:49,News,Etfdailynews,3
+2025-05-13 06:08:50,News,Etfdailynews,3
+2025-05-13 06:08:50,News,Etfdailynews,3
+2025-05-13 06:08:52,News,Etfdailynews,3
+2025-05-13 06:10:59,News,Etfdailynews,3
+2025-05-13 06:40:49,News,Etfdailynews,4
+2025-05-13 07:00:00,News,Yahoo Finance,3
+2025-05-13 07:14:52,News,Etfdailynews,4
+2025-05-13 07:45:00,News,Fool,4
+2025-05-13 08:06:52,News,Etfdailynews,3
+2025-05-13 08:06:55,News,Etfdailynews,3
+2025-05-13 08:06:55,News,Etfdailynews,3
+2025-05-13 08:06:55,News,Etfdailynews,3
+2025-05-13 08:06:57,News,Etfdailynews,3
+2025-05-13 08:47:00,News,Fool,4
+2025-05-13 09:00:22,News,Medicaldevice-network,3
+2025-05-13 09:04:47,News,Yahoo Finance,3
+2025-05-13 10:36:37,News,Investopedia,3
+2025-05-13 11:12:00,News,Yahoo Finance,3
+2025-05-13 11:14:44,News,Investopedia,3
+2025-05-13 11:55:47,News,Investopedia,4
+2025-05-13 12:00:00,News,Fool,4
+2025-05-13 12:51:59,News,Yahoo Finance,3
+2025-05-13 12:58:29,News,Yahoo Finance,3
+2025-05-13 13:05:06,News,Investopedia,3
+2025-05-13 13:28:45,News,Yahoo Finance,3
+2025-05-13 13:52:04,News,Investopedia,3
+2025-05-13 14:15:27,Reddit,wallstreetbets,3
+2025-05-13 14:20:35,News,Investopedia,3
+2025-05-13 15:00:52,News,Investopedia,3
+2025-05-13 15:23:05,News,Investopedia,3
+2025-05-13 15:53:31,News,Investopedia,3
+2025-05-13 16:12:57,News,Investopedia,3
+2025-05-13 17:25:12,News,Investopedia,3
+2025-05-13 18:00:39,News,Investopedia,3
+2025-05-13 18:28:22,News,Investopedia,4
+2025-05-13 18:43:20,Reddit,wallstreetbets,3
+2025-05-13 18:51:06,Reddit,wallstreetbets,4
+2025-05-13 18:51:30,Reddit,StockMarket,3
+2025-05-13 19:02:19,News,Yahoo Finance,4
+2025-05-13 19:15:23,News,Investopedia,3
+2025-05-13 19:15:23,News,Investopedia,3
+2025-05-13 19:29:25,News,Yahoo Finance,3
+2025-05-13 19:29:44,News,Yahoo Finance,3
+2025-05-13 19:30:40,News,Investopedia,3
+2025-05-13 19:46:33,News,Investopedia,4
+2025-05-13 19:50:42,News,Yahoo Finance,3
+2025-05-13 19:58:38,News,Yahoo Finance,3
+2025-05-13 20:03:01,News,Yahoo Finance,3
+2025-05-13 20:09:23,News,Yahoo Finance,3
+2025-05-13 20:12:44,News,Yahoo Finance,3
+2025-05-13 20:19:00,News,Yahoo Finance,3
+2025-05-13 20:23:11,News,Investopedia,3
+2025-05-13 20:24:06,News,Yahoo Finance,3
+2025-05-13 20:26:18,News,Yahoo Finance,3
+2025-05-13 20:38:11,News,Investopedia,3
+2025-05-13 20:48:58,News,Investopedia,4
+2025-05-13 20:52:40,News,Investopedia,3
+2025-05-13 20:57:10,News,Yahoo Finance,3
+2025-05-13 21:03:02,Reddit,wallstreetbets,3
+2025-05-13 21:24:33,News,Yahoo Finance,3
+2025-05-13 21:26:55,News,Investopedia,3
+2025-05-13 21:29:59,News,Yahoo Finance,3
+2025-05-13 21:47:30,News,Yahoo Finance,3
+2025-05-13 22:08:49,News,Yahoo Finance,3
+2025-05-13 22:09:56,News,Investopedia,3
+2025-05-13 22:46:07,News,Investopedia,3
+2025-05-13 23:36:13,News,Yahoo Finance,3
