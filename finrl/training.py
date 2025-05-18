@@ -39,7 +39,7 @@ def train():
             "stock_dim": stock_dimension,
             "tech_indicator_list": INDICATORS,
             "action_space": stock_dimension,
-            "reward_scaling": 1e-10              # Smaller for hourly granularity
+            "reward_scaling": 1e-15              # Smaller for hourly granularity
         }
 
         e_train_gym = StockTradingEnv(df = train, **env_kwargs)
