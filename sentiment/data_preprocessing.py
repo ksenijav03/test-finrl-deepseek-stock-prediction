@@ -5,24 +5,20 @@ import re
 from config import TEMP_PROCESSED_JSON
 import sys
 
+
 def data_preprocessing(path):
     """
-    Reads news.csv, normalises timestamps, shifts weekend entries to Monday 09:00,
-    extracts ONLY yesterday’s rows, and writes them to TEMP_PROCESSED_JSON.
-
-    Args
-    ----
-    path : str
-        File path to news.csv
+    This function reads from news.csv and extracts only the subset of news data from yesterday to today.
+    After extracting, df_subset is saved in temp/processed_data.json.
+    
+    Args:
+        path(str): Path to news.csv
     """
     try:
-        import pandas as pd
-        import json, re, sys
-        from datetime import datetime, timedelta
-        from config import TEMP_PROCESSED_JSON
-
-        # ───────────────────────── 1. LOAD & RENAME ──────────────────────────
-        df = pd.read_csv(path, delimiter=";", encoding="utf-8", quotechar='"', on_bad_lines="skip")
+        # Load the CSV file
+        df = pd.read_csv(path, delimiter=";", encoding='utf-8')
+        
+       # Rename columns accordingly
         df = df.rename(columns={
             "Date and Timestamp": "datetime",
             "Title": "header",
@@ -32,43 +28,42 @@ def data_preprocessing(path):
             "Link": "link",
         })
 
-        # ──────────────────────── 2. PARSE DATETIMES ─────────────────────────
-        def _standardise(dt):
-            # Match e.g. '16.3.2025 12:51' then convert to ISO-like string
-            if isinstance(dt, str) and re.match(r"^\d{1,2}\.\d{1,2}\.\d{4} \d{1,2}:\d{2}$", dt):
-                return pd.to_datetime(dt, dayfirst=True, errors="coerce")
-            return pd.to_datetime(dt, errors="coerce")
+        # Reformat the date column to datetime object and sort in ascending order
+        def standardize_datetime_format(dt_str):
+            # Match format like '16.3.2025 12:51'
+            if re.match(r'^\d{1,2}\.\d{1,2}\.\d{4} \d{1,2}:\d{2}$', dt_str):
+                # Convert to 'YYYY-MM-DD HH:MM:SS'
+                return pd.to_datetime(dt_str, dayfirst=True).strftime('%Y-%m-%d %H:%M:%S')
+            return dt_str  # Leave other formats unchanged
 
-        df["datetime"] = df["datetime"].apply(_standardise)
-        df = df.dropna(subset=["datetime"])                       # discard unparsable rows
+        # Apply the function to each row
+        df['datetime'] = df['datetime'].astype(str).apply(standardize_datetime_format)
 
-        # ─────────────────────── 3. WEEKEND → MONDAY 09:00 ───────────────────
-        def _weekend_to_monday(dt):
-            # 5 = Saturday, 6 = Sunday
-            if dt.weekday() in (5, 6):
-                return (dt + timedelta(days=7 - dt.weekday())
-                       ).replace(hour=9, minute=0, second=0, microsecond=0)
-            return dt
+        # Convert the datetime column to pandas datetime
+        df['datetime'] = pd.to_datetime(df['datetime'])
+        df = df.sort_values(by='datetime', ascending=True)
 
-        df["datetime"] = df["datetime"].apply(_weekend_to_monday)
+        # Set startdate as yesterday's date and end date as today's date
+        start_date = (datetime.now() - timedelta(days=1)).date()
+        end_date = datetime.now().date()
+        
+        print(f'Start date: {start_date}')
+        print(f'End date: {end_date}')
 
-        # ───────────────────────── 4. SORT CHRONOLOGICALLY ───────────────────
-        df = df.sort_values("datetime").reset_index(drop=True)
+        df_subset = df[(df['datetime'].dt.date >= start_date) & (df['datetime'].dt.date < end_date)]
+        df_subset.reset_index(drop=True)
 
-        # ──────────────────────── 5. FILTER “YESTERDAY” ──────────────────────
-        start_date = (datetime.now() - timedelta(days=30)).date()   # 00:00 yesterday
-        end_date   =  datetime.now().date()                        # 00:00 today
-
-        df_subset = df[(df["datetime"].dt.date >= start_date) &
-                       (df["datetime"].dt.date <  end_date)]
-
+        # Check if df_subset is empty
         if df_subset.empty:
-            raise ValueError("No data available for yesterday’s window; df_subset is empty.")
+            raise ValueError("No data available for the given date range. df_subset is empty.")
 
-        # ───────────────────────── 6. SAVE AS JSON ───────────────────────────
-        with open(TEMP_PROCESSED_JSON, "w") as f:
-            json.dump(df_subset.to_dict(orient="records"), f, indent=4, default=str)
-            print(f"✅ Processed data saved to {TEMP_PROCESSED_JSON}")
+        # Convert each row to a dictionary and collect in a list
+        data_dicts = df_subset.to_dict(orient='records')
+
+        # Save to JSON file
+        with open(TEMP_PROCESSED_JSON, 'w') as f:
+            json.dump(data_dicts, f, indent=4, default=str)
+            print('Processed data saved as JSON file')
 
     except Exception as e:
         print(f"[Error in data preprocessing pipeline] -> {e}")
