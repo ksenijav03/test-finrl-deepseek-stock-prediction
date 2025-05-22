@@ -13,14 +13,14 @@ The goal is to see Agent 2 perform better in its trades, given that it has addit
 There are 5 principal python scripts in this directory. The purpose of each script is as follows:
 
 ### `processing.py`
- - Downloads hourly NVDA stock data from yahoo finance between the start date (2024-1-1) and end date (yesterday)
+ - Downloads hourly NVDA stock data from yahoo finance 600 days ago from the current date.
  - Preprocesses and combines the data with stock indicators using FinRL's FeatureEngineer
  - Splits the data into train/trade set (80%-20%) and saves them into `train_data.csv` and `trade_data.csv` for the next stage
 
 ### `training.py`
- - Trains the A2C model using `train_data.csv` obtained from `processing.py`
+ - Trains the A2C and SAC model using `train_data.csv` obtained from `processing.py`
  - Called only if it is necessary to retrain the model
- - Otherwise, the pre-trained A2C model in `trained_models/agent_a2c.zip` which was trained on the stock price data between the recent 1.3 year (2024-1-1 to 2025-4-14) will be used, as it currently performs well
+ - Otherwise, the pre-trained A2C and SAC model in `trained_models/` which was trained on the stock price data between 2023-10-02 to 2025-01-24 will be used.
 
 ### `utils.py`
  - Contains all the necessary functions needed in `inference.py`

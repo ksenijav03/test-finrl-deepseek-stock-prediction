@@ -39,12 +39,12 @@ class RiskAwareStockTradingEnv(StockTradingEnv):
 
     def _get_risk_scaling_factor(self, risk_score):
         if risk_score == 0:
-            return 1.0  # No change
+            return 1  # No change
         elif 1 <= risk_score <= 2:
-            return 1.3  # More optimistic
+            return 5  # More optimistic
         elif risk_score == 3:
-            return 1.1  # Slight optimistic
+            return 3  # Slight optimistic
         elif 4 <= risk_score <= 5:
-            return 0.8  # Slight caution
+            return 0.9  # Slight caution
         else:
             return 1.0
