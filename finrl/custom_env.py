@@ -29,7 +29,7 @@ class RiskAwareStockTradingEnv(StockTradingEnv):
         # Inject risk into state indirectly 
         risk_weight = self._get_risk_scaling_factor(risk_score)
 
-        # State[0] refers to the agent's cash balance
+        # State[0] is a normalized or scaled value, part of the observation used by the agent.
         state[0] = state[0] * risk_weight
 
         return state, reward, done, truncated, info

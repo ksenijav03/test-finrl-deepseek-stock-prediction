@@ -44,6 +44,7 @@ There are 5 principal python scripts in this directory. The purpose of each scri
  - This class inherits the StockTradingEnv class from **FinRL**, and only overwrittes the step() function to give 'reward' or 'penalty' to the agent depending on the risk scores. 
  - The amount of 'reward' or 'penalty' is indicated by a given weight value. 
  - For example, a lower risk score signals optimistic chance in its trade, thus the agent's state[0] is multiplied with a higher weight ('reward').
+ - state[0] is a normalized or scaled value that is part of the observation used by the agent.
  - This is to mimic the agent's actions in a trading environment where the 'imaginary' state space includes the sentiment risk scores, as it is not possible to directly train the models on a state space with sentiment risk scores, due to the limitations on obtaining news articles through API calls for more than a week in the past. 
 
 ### ➤ ⚙️ **Automated Execution with GitHub Actions**  
