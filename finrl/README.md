@@ -43,8 +43,8 @@ There are 5 principal python scripts in this directory. The purpose of each scri
  - `custom_env.py` shows a custom class built for Agent 2's Trading Environment to take the news sentiment risk scores into consideration during its trading steps.
  - This class inherits the StockTradingEnv class from **FinRL**, and only overwrittes the step() function to give 'reward' or 'penalty' to the agent depending on the risk scores. 
  - The amount of 'reward' or 'penalty' is indicated by a given weight value. 
- - For example, a lower risk score signals optimistic chance in its trade, thus the agent's cash balance is multiplied with a higher weight ('reward').
- - This is to mimic the agent's actions in a trading environment where the 'imaginary' state space includes the sentiment risk scores, as it is not possible to directly train the A2C on a state space with sentiment risk scores, due to the limitations on obtaining news articles through API calls for more than a week in the past. 
+ - For example, a lower risk score signals optimistic chance in its trade, thus the agent's state[0] is multiplied with a higher weight ('reward').
+ - This is to mimic the agent's actions in a trading environment where the 'imaginary' state space includes the sentiment risk scores, as it is not possible to directly train the models on a state space with sentiment risk scores, due to the limitations on obtaining news articles through API calls for more than a week in the past. 
 
 ### ➤ ⚙️ **Automated Execution with GitHub Actions**  
  - Runs every Thursday at 10:00 (UTC).
