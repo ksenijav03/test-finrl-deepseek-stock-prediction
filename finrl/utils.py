@@ -76,12 +76,12 @@ def predict_agent_1(trade, trained_model):
     e_trade_gym = StockTradingEnv(df=trade, **env_kwargs)
     env_trade, _ = e_trade_gym.get_sb_env()
 
-    df_account_value_a2c_agent1, df_actions_a2c_agent1 = DRLAgent.DRL_prediction(
+    df_account_value_agent1, df_actions_agent1 = DRLAgent.DRL_prediction(
         model=trained_model,
         environment=e_trade_gym
     )
     
-    return df_account_value_a2c_agent1, df_actions_a2c_agent1
+    return df_account_value_agent1, df_actions_agent1
 
 
 def predict_agent_2(trade, trained_model, trade_sentiment):
@@ -107,12 +107,12 @@ def predict_agent_2(trade, trained_model, trade_sentiment):
 
     env_trade_sentiment, _ = e_trade_sentiment.get_sb_env()
     
-    df_account_value_a2c_agent2, df_actions_a2c_agent2 = DRLAgent.DRL_prediction(
+    df_account_value_agent2, df_actions_agent2 = DRLAgent.DRL_prediction(
         model=trained_model,
         environment=e_trade_sentiment
     )
 
-    return df_account_value_a2c_agent2, df_actions_a2c_agent2
+    return df_account_value_agent2, df_actions_agent2
 
 
 def process_df_for_mvo(df):
