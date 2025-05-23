@@ -38,9 +38,9 @@ class RiskAwareStockTradingEnv(StockTradingEnv):
         if risk_score == 0:
             return 1  # No change
         elif 1 <= risk_score <= 2:
-            return 10  # More optimistic
+            return 15  # More optimistic
         elif risk_score == 3:
-            return 6  # Slight optimistic
+            return 10  # Slight optimistic
         elif 4 <= risk_score <= 5:
             return -5  # Slight caution
         else:
