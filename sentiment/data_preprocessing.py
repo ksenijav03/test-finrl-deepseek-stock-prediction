@@ -16,11 +16,6 @@ def data_preprocessing(path):
         File path to news.csv
     """
     try:
-        import pandas as pd
-        import json, re, sys
-        from datetime import datetime, timedelta
-        from config import TEMP_PROCESSED_JSON
-
         # ───────────────────────── 1. LOAD & RENAME ──────────────────────────
         df = pd.read_csv(path, delimiter=";", encoding="utf-8", quotechar='"', on_bad_lines="skip")
         df = df.rename(columns={
