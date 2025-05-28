@@ -12,8 +12,6 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
-      with:
-        ref: kse_model_test # Checkout the kse_model_test branch
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -40,10 +38,10 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git pull origin kse_model_test # Pull from kse_model_test
+        git pull origin main
         cd scrape
         git add news.csv seen_hashes.json
         git commit -m "Automated daily scrape: $(date)"
-        git push origin kse_model_test # Push to kse_model_test
+        git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
