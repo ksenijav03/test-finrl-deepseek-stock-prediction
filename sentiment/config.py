@@ -8,7 +8,7 @@ TEMP_DATE_RISK_CSV = 'temp/date_risk.csv'
 AGGREGATED_WEIGHTS_CSV = 'aggregated_risk_scores.csv'
 
 # Model
-G_LLM = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+G_LLM = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 
 # Specific source weights
 SOURCE_WEIGHTS = {
